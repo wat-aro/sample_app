@@ -15,4 +15,9 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore gem files.
 /vendor
+
+# Ignore Spring files.
+/spring/*.pid
