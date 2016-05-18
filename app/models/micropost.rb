@@ -11,7 +11,7 @@ class Micropost < ActiveRecord::Base
   # アップロード画像のサイズを検証する
   def picture_size
     if picture.size > 5.megabytes
-      errors.add(:picture, 'should be less than 5MB')
+      errors.add(:picture, t('errors.messages.picture.should_be_less_than_5MB'))
     end
   end
 end
