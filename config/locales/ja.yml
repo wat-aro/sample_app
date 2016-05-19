@@ -267,7 +267,7 @@ ja:
     case: パスワードを忘れた場合
     submit: パスワード再発行申請
 
-  about_page:
+  about:
     is: は
     tutorial_is: Ruby on Railsを使ってweb開発を教える
     book: 本
@@ -328,7 +328,6 @@ ja:
   rails: Ruby on Rails
   logo: sample app
   login: ログイン
-  email: メールアドレス
   password: パスワード
   new_user: 新規ユーザー登録
   signup: 新規ユーザー登録

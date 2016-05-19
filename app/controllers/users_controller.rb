@@ -33,7 +33,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update_attributes(user_params)
-      flash[:success] = 'Profile updated'
+      flash[:success] = t('flash.profile_updated')
       redirect_to @user
     else
       render 'edit'
@@ -42,7 +42,7 @@ class UsersController < ApplicationController
 
   def destroy
     User.find(params[:id]).destroy
-    flash[:success] = 'User deleted'
+    flash[:success] = t('flash.user_deleted')
     redirect_to users_url
   end
 
