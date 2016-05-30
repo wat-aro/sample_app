@@ -29,7 +29,9 @@ ja:
           should_be_less_than_5MB: のサイズの上限は5MBです．
         password:
           cant_be_empty: を入力してください．
-
+  will_paginate:
+    next_label: 次
+    previous_label: 前
   date:
     abbr_day_names:
     - 日
