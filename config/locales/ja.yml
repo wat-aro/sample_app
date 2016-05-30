@@ -32,6 +32,13 @@ ja:
   will_paginate:
     next_label: 次
     previous_label: 前
+  views:
+    pagination:
+      previous: "≪ 前ページ"
+      next: "次ページ ≫"
+      truncate: "..."
+      first: 最初
+      last: 最後
   date:
     abbr_day_names:
     - 日
