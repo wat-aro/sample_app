@@ -69,6 +69,9 @@ GEM
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
     erubis (2.7.0)
+    exception_notification (4.1.4)
+      actionmailer (~> 4.0)
+      activesupport (~> 4.0)
     excon (0.49.0)
     execjs (2.6.0)
     faker (1.4.2)
@@ -342,6 +345,7 @@ DEPENDENCIES
   byebug (= 3.4.0)
   carrierwave (= 0.10.0)
   coffee-rails (= 4.1.0)
+  exception_notification
   faker (= 1.4.2)
   fog (= 1.36.0)
   guard-minitest (= 2.3.1)
