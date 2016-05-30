@@ -8,9 +8,10 @@ class UserMailerTest < ActionMailer::TestCase
     assert_equal I18n.t('account_activation'), mail.subject
     assert_equal [user.email], mail.to
     assert_equal ['noreply@example.com'], mail.from
-    assert_match user.name, mail.body.encoded
-    assert_match user.activation_token, mail.body.encoded
-    assert_match CGI.escape(user.email), mail.body.encoded
+    body_content = mail.body.encoded.split(/\r\n/).map{ |i| Base64.decode64(i)}.join
+    assert_match user.name, body_content
+    assert_match user.activation_token, body_content
+    assert_match CGI.escape(user.email), body_content
   end
 
   test 'password_reset' do
@@ -20,7 +21,8 @@ class UserMailerTest < ActionMailer::TestCase
     assert_equal I18n.t('password_reset.title'), mail.subject
     assert_equal [user.email], mail.to
     assert_equal ['noreply@example.com'], mail.from
-    assert_match user.reset_token, mail.body.encoded
-    assert_match CGI.escape(user.email), mail.body.encoded
+    body_content = mail.body.encoded.split(/\r\n/).map{ |i| Base64.decode64(i)}.join
+    assert_match user.reset_token, body_content
+    assert_match CGI.escape(user.email), body_content
   end
 end

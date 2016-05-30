@@ -304,7 +304,7 @@ ja:
     micropost: 投稿
 
   flash:
-    account_activated: アカウントを有効にしました．
+    account_activated: 登録が完了しました．
     invalid_activation_link: 無効なリンクです．
     please_log_in: ログインしてください．
     micropost_created: 投稿しました．
