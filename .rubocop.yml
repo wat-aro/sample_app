@@ -8,6 +8,9 @@ MethodLength:
 NumericLiterals:
   MinDigits: 12
 
+AsciiComments:
+  Enabled: false
+
 ClassAndModuleChildren:
   Enabled: false
 
@@ -47,11 +50,14 @@ TrailingComma:
 UselessAssignment:
   Enabled: false
 
+Style/Documentation:
+  Enabled: false
+
 Style/StringLiterals:
   EnforcedStyle: single_quotes
 
 Style/AlignParameters:
-  EnforcedStyle: with_fixed_indentation
+  EnforcedStyle: with_first_parameter
 
 Style/SpaceAroundEqualsInParameterDefault:
   EnforcedStyle: space
