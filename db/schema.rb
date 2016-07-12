@@ -40,14 +40,7 @@ ActiveRecord::Schema.define(version: 20160602071924) do
     t.string   "email",                  default: "",    null: false
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
-    t.string   "password_digest"
-    t.string   "remember_digest"
     t.boolean  "admin",                  default: false
-    t.string   "activation_digest"
-    t.boolean  "activated",              default: false
-    t.datetime "activated_at"
-    t.string   "reset_digest"
-    t.datetime "reset_sent_at"
     t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -57,6 +50,10 @@ ActiveRecord::Schema.define(version: 20160602071924) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

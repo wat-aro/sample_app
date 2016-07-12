@@ -8,21 +8,19 @@ class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
 
-  # テストユーザーがログインしていればtrueを返す
-  def is_logged_in?
-    !session[:user_id].nil?
-  end
+  # # テストユーザーがログインしていればtrueを返す
+  # def is_logged_in?
+  #   !session[:user_id].nil?
+  # end
 
   # テストユーザーとしてログインする
   def log_in_as(user, options = {})
     password = options[:password] || 'password'
-    remember_me = options[:remember_me] || '1'
     if integration_test?
-      post login_path, session: { email: user.email,
-                                  password: password,
-                                  remember_me: remember_me }
+      post user_session_path, user: { email: user.email,
+                                      password: password }
     else
-      session[:user_id] = user.id
+      sign_in user
     end
   end
 
@@ -31,5 +29,9 @@ class ActiveSupport::TestCase
   # 統合テスト内ではtrueを返す
   def integration_test?
     defined?(post_via_redirect)
+  end
+
+  class ActionController::TestCase
+    include Devise::TestHelpers
   end
 end

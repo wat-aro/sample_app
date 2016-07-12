@@ -18,6 +18,7 @@ gem 'jbuilder',     '2.2.3'
 gem 'sdoc',         '0.4.0', group: :doc
 gem 'kaminari'
 gem 'devise'
+gem 'devise-i18n'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
@@ -25,6 +26,8 @@ group :development, :test do
   gem 'web-console', '2.0.0.beta3'
   gem 'spring',      '1.1.3'
   gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'letter_opener'
 end
 
 group :test do

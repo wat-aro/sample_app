@@ -333,6 +333,9 @@ ja:
     base_title: Ruby on Rails Tutorial サンプル・アプリケーション
     other_title: ' | Ruby on Rails Tutorial サンプル・アプリケーション'
 
+  admin:
+    delete: 管理者は削除できません
+
   tutorial: Ruby on Rails Tutorial
   rails: Ruby on Rails
   logo: sample app
@@ -351,3 +354,4 @@ ja:
   profile: プロフィール
   confirmation: パスワード再入力
   account_activation: アカウントの有効化
+  minimum_password: 文字以上のパスワードを入力してください

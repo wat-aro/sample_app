@@ -1,4 +1,4 @@
-class UserMailer < Devise::Mailer
+class Users::Mailer < Devise::Mailer
   helper :application
   include Devise::Controllers::UrlHelpers
 

@@ -1,11 +1,12 @@
+ActionMailer::Base.perform_deliveries = false
+
 # ユーザー
 User.create!(name: 'Example User',
              email: 'example@railstutorial.jp',
              password: 'foobar',
              password_confirmation: 'foobar',
-             admin: true,
-             activated: true,
-             activated_at: Time.zone.now)
+             confirmed_at: 1.hour.ago,
+             admin: true)
 
 99.times do |n|
   name = Faker::Name.name
@@ -15,8 +16,7 @@ User.create!(name: 'Example User',
                email: email,
                password: password,
                password_confirmation: password,
-               activated: true,
-               activated_at: Time.zone.now)
+               confirmed_at: 1.hour.ago)
 end
 
 # マイクロポスト

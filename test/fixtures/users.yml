@@ -1,38 +1,33 @@
 michael:
   name:  Michael Example
   email: michael@example.com
-  password_digest: <%= User.digest('password') %>
+  encrypted_password: <%= User.digest('password') %>
+  confirmed_at: <%= 1.hour.ago %>
   admin: true
-  activated: true
-  activated_at: <%= Time.zone.now %>
 
 archer:
   name: Sterling Archer
   email: duchess@example.gov
-  password_digest: <%= User.digest('password') %>
-  activated: true
-  activated_at: <%= Time.zone.now %>
+  encrypted_password: <%= User.digest('password') %>
+  confirmed_at: <%= 1.hour.ago %>
 
 lana:
   name: Lana Kane
   email: hands@example.gov
-  password_digest: <%= User.digest('password') %>
-  activated: true
-  activated_at: <%= Time.zone.now %>
+  encrypted_password: <%= User.digest('password') %>
+  confirmed_at: <%= 1.hour.ago %>
 
 mallory:
   name: Mallory Archer
   email: boss@example.gov
-  password_digest: <%= User.digest('password') %>
-  activated: true
-  activated_at: <%= Time.zone.now %>
+  encrypted_password: <%= User.digest('password') %>
+  confirmed_at: <%= 1.hour.ago %>
 
 <% 30.times do |n| %>
 user_<%= n %>:
   name: <%= "User#{n}" %>
   email: <%= "user-#{n}@example.com" %>
-  password_digest: <%= User.digest('password') %>
-  activated: true
-  activated_at: <%= Time.zone.now %>
+  encrypted_password: <%= User.digest('password') %>
+  confirmed_at: <%= 1.hour.ago %>
 <% end %>
 

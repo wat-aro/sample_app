@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
 
@@ -11,37 +12,10 @@ class UsersController < ApplicationController
     @microposts = @user.microposts.page(params[:page])
   end
 
-  def new
-    @user = User.new
-  end
-
-  def create
-    @user = User.new(user_params)
-    if @user.save
-      @user.send_activation_email
-      flash[:info] = t('flash.check_your_email_for_the_activation_link')
-      redirect_to root_url
-    else
-      render 'new'
-    end
-  end
-
-  def edit
-  end
-
-  def update
-    if @user.update_attributes(user_params)
-      flash[:success] = t('flash.profile_updated')
-      redirect_to @user
-    else
-      render 'edit'
-    end
-  end
-
   def destroy
-    User.find(params[:id]).destroy
-    flash[:success] = t('flash.user_deleted')
-    redirect_to users_url
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to users_path, notice: t('flash.user_deleted')
   end
 
   def following

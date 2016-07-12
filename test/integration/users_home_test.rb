@@ -3,7 +3,7 @@ require 'test_helper'
 class UsersHomeTest < ActionDispatch::IntegrationTest
   def setup
     @user = users(:michael)
-    log_in_as(@user)
+    log_in_as @user
   end
 
   test 'home display' do

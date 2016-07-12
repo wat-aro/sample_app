@@ -6,7 +6,7 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
   end
 
   test 'micropost interface' do
-    log_in_as(@user)
+    log_in_as @user
     get root_path
     assert_select 'nav.pagination'
     # 無効な送信
