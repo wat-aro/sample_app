@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  before_action :correct_user, only: [:edit, :update]
-  before_action :admin_user, only: :destroy
+  before_action :correct_user!, only: [:edit, :update]
+  before_action :admin_user!, only: :destroy
 
   def index
     @users = User.page(params[:page])
@@ -41,13 +41,13 @@ class UsersController < ApplicationController
   # beforeフィルター
 
   # 正しいユーザーかどうか確認
-  def correct_user
+  def correct_user!
     @user = User.find(params[:id])
     redirect_to(root_url) unless current_user?(@user)
   end
 
   # 管理者かどうか確認
-  def admin_user
+  def admin_user!
     redirect_to(root_url) unless current_user.admin?
   end
 end
