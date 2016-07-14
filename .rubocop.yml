@@ -1,76 +1,76 @@
-# tolerant of https://github.com/airbnb/ruby styles
-LineLength:
-  Max: 128
+# # tolerant of https://github.com/airbnb/ruby styles
+# LineLength:
+#   Max: 128
 
-MethodLength:
-  Max: 30
+# MethodLength:
+#   Max: 30
 
-NumericLiterals:
-  MinDigits: 12
+# NumericLiterals:
+#   MinDigits: 12
 
-AsciiComments:
-  Enabled: false
+# AsciiComments:
+#   Enabled: false
 
-ClassAndModuleChildren:
-  Enabled: false
+# ClassAndModuleChildren:
+#   Enabled: false
 
-Documentation:
-  Enabled: false
+# Documentation:
+#   Enabled: false
 
-DotPosition:
-  Enabled: false
+# DotPosition:
+#   Enabled: false
 
-EmptyLinesAroundAccessModifier:
-  Enabled: false
+# EmptyLinesAroundAccessModifier:
+#   Enabled: false
 
-HandleExceptions:
-  Enabled: false
+# HandleExceptions:
+#   Enabled: false
 
-IfUnlessModifier:
-  Enabled: false
+# IfUnlessModifier:
+#   Enabled: false
 
-IndentHash:
-  Enabled: false
+# IndentHash:
+#   Enabled: false
 
-NegatedIf:
-  Enabled: false
+# NegatedIf:
+#   Enabled: false
 
-PercentLiteralDelimiters:
-  Enabled: false
+# PercentLiteralDelimiters:
+#   Enabled: false
 
-RedundantSelf:
-  Enabled: false
+# RedundantSelf:
+#   Enabled: false
 
-Semicolon:
-  Enabled: false
+# Semicolon:
+#   Enabled: false
 
-TrailingComma:
-  Enabled: false
+# TrailingComma:
+#   Enabled: false
 
-UselessAssignment:
-  Enabled: false
+# UselessAssignment:
+#   Enabled: false
 
-Style/Documentation:
-  Enabled: false
+# Style/Documentation:
+#   Enabled: false
 
-Style/StringLiterals:
-  EnforcedStyle: single_quotes
+# Style/StringLiterals:
+#   EnforcedStyle: single_quotes
 
-Style/AlignParameters:
-  EnforcedStyle: with_first_parameter
+# Style/AlignParameters:
+#   EnforcedStyle: with_first_parameter
 
-Style/SpaceAroundEqualsInParameterDefault:
-  EnforcedStyle: space
+# Style/SpaceAroundEqualsInParameterDefault:
+#   EnforcedStyle: space
 
-Style/SpaceBeforeBlockBraces:
-  EnforcedStyle: space
+# Style/SpaceBeforeBlockBraces:
+#   EnforcedStyle: space
 
-Style/Lambda:
-  Enabled: false
+# Style/Lambda:
+#   Enabled: false
 
-Style/GuardClause:
-  Enabled: false
+# Style/GuardClause:
+#   Enabled: false
 
-CoffeeScript:
-  Enabled: true
-  config_file: config/.coffeelint.json
+# CoffeeScript:
+#   Enabled: true
+#   config_file: config/.coffeelint.json
