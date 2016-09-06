@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  fixtures :all
   let(:user) do
     User.new(name: 'Example User', email: 'user@example.com',
              password: 'foobar', password_confirmation: 'foobar')
@@ -79,15 +78,17 @@ RSpec.describe User, type: :model do
   end
 
   it 'associated microposts should be destroyed' do
-    user = users(:archer)
+    user = create(:user)
+    user.microposts.create(content: 'foo')
+    user.microposts.create(content: 'bar')
     # archer has 2 microposts
     expect { user.destroy }.to change { Micropost.count }.by(-2)
   end
 
   describe 'feed' do
-    let(:michael) { users(:michael) }
-    let(:archer) { users(:archer) }
-    let(:lana) { users(:lana) }
+    let(:michael) { create(:user) }
+    let(:archer) { create(:user) }
+    let(:lana) { create(:user) }
 
     it "have following user's posts" do
       lana.microposts.each do |post_following|

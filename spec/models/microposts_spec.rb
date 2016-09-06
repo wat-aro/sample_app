@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Micropost, type: :model do
-  fixtures :users, :microposts
-  let(:user) { users(:michael) }
+  let(:user) { create(:user) }
   let(:micropost) { user.microposts.build(content: 'Lorem ipsum')}
 
   it 'is valid' do
@@ -31,7 +30,7 @@ RSpec.describe Micropost, type: :model do
 
   describe 'order' do
     it 'is most recent first' do
-      expect(microposts(:most_recent)).to eq Micropost.first
+      expect(user.microposts.create(content: 'Lorem ipsum')).to eq Micropost.first
     end
   end
 end

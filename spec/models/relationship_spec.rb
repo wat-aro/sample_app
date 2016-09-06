@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Relationship, type: :model do
-  fixtures :all
   let(:relationship) { Relationship.new(follower_id: 1, followed_id:2) }
 
   it 'is valid' do
